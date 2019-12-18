@@ -13,6 +13,9 @@ class BinarySearchTree:
     # Insert the given value into the tree
     def insert(self, value):
         pass
+        # start at root, set as currentNode
+        # if value < root.value, go left. Set current = current.left
+        # if value > root.value, go right. Set current = current.right
 
     # Return True if the tree contains the value
     # False if it does not
