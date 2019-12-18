@@ -12,9 +12,24 @@ class BinarySearchTree:
 
     # Insert the given value into the tree
     def insert(self, value):
-        pass
-        # start at root, set as currentNode
+        # if there is no root
+        if not self.value:
+            self.value = value
+        # if value is smaller, go left
+        elif value < self.value:
+            if not self.left:
+                self.left = BinarySearchTree(value)
+            else:
+                self.left.insert(value)
+        # if value is greater, go right
+        elif value >= self.value:
+            if not self.right:
+                self.right = BinarySearchTree(value)
+            else:
+                self.right.insert(value)
+
         # if value < root.value, go left. Set current = current.left
+
         # if value > root.value, go right. Set current = current.right
 
     # Return True if the tree contains the value
