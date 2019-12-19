@@ -39,9 +39,13 @@ class BinarySearchTree:
         # base case
         if target == self.value:
             return True 
-        elif target < self.value and self.left is None:
+        elif target < self.value:
+            if self.left is None:
+                return False
             return self.left.contains(target)
-        elif target > self.value and self.right is None:
+        elif target > self.value:
+            if self.right is None:
+                return False
             return self.right.contains(target)
         return False
 
